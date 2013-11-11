@@ -1,5 +1,4 @@
-ROFLvid
-========
+
 
 <p>A website which integrated with Facebook and Twitter allowing users to view, share, upload and rate funny videos</p>
 
