@@ -18,3 +18,8 @@ ROFLvid
 <p>The Video ranking system is an equation which considers up votes, down votes, facebook shares, facebook likes and number of tweets. Facebook shares are given a higher weight value than all the other paramters. Facebook likes are given the least amount of weightage</p>
 
 <p>The main design of the website is a custom layout based off the Windows Metro UI. The website utilizes the new CSS 3 Patterns for sleek roolover animations, and screen changed animations</p>
+
+<p>Videos can be added to the website simply by copying a youtube video url and pasting it into the VideoURL text box on the main web page.</p>
+<p>When users upload a video, they can assign predefined hashtags, in order to make the content more searchable when the videos are shared on Facebook or Twitter</p>
+<p>The Admin control panel allows the admin to peform CRUD operations on the database of videos</p>
+<p>The admin control panel also includes a function which allows them to run a optimized search on youtube to find funny videos and add them with a click of a button</p>
