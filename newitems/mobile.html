@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densityDpi=medium-dpi">
+
+        <link rel="stylesheet" type="text/css" href="bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="bootstrap-responsive.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="bootstrap.js"></script>
+
+        <style type="text/css">
+            body{
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                margin: 0;
+            }
+            #navbar{
+                background-image: linear-gradient(to bottom,#333 0,#1b1b1b 100%);
+                height:46px;
+                left:0;
+                position: fixed;
+                text-align: left;
+                top:0;
+                width:100%;
+                z-index: 2;
+            }
+            #lg{
+                background-image: url('logo.png');
+                background-origin: content-box;
+                background-repeat: no-repeat;
+                display: inline-block;
+                height:36px;
+                margin-left: 20px;
+                padding-bottom: 5px;
+                padding-top:5px;
+                width:138px;
+            }
+            #main{
+                padding-top: 10px;
+                position: relative;
+                top:46px;
+                width:100%;
+            }
+            .box{
+                border: 1px solid rgb(20,20,20);
+                margin-bottom: 10px;
+                margin-left: auto;
+                margin-right: auto;
+                height:160px;
+                overflow: hidden;
+                position: relative;
+                max-width:300px;
+            }
+            .box-wrapper{
+                bottom:-10px;
+                left: -10px;
+                position: absolute;
+                right:-10px;
+                top:-10px;
+            }
+            .text-layer{
+                background-image: -webkit-linear-gradient(rgba(0,0,0,0) 0%, #000 100%);
+                box-sizing: border-box;
+                bottom:0;
+                color:#fff;
+                height: 50%;
+                padding-left: 10px;
+                padding-top: 5px;
+                position: absolute;
+                width:100%;
+            }
+            .time{
+                border-bottom: 3px solid rgba(255,255,255,0.7);
+                font-size: 14px;
+                padding-left: 3px;
+                padding-right: 3px;
+            }
+            .v-title{
+                display: block;
+                font-weight: bold;
+                margin-top: 3px;
+            }
+            .category{
+                background-color: #0092ef;
+                border: 1px solid rgb(20,20,20);
+                color:#fff;
+                font-weight: bold;
+                height:20px;
+                position: absolute;
+                right: 10px;
+                text-align: center;
+                top:10px;
+                width:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="navbar">
+            <div id="lg"></div>
+        </div>
+        <div id="main">
+            <div class="row-fluid">
+                <div class="span4">
+                    <div class="box">
+                        <div class="box-wrapper">
+                            <img src="bcV5ix3kQ7s.jpg" />
+                        </div>
+                        <div class="text-layer">
+                            <span class="time">04:58</span>
+                            <span class="v-title">Prank vs Prank</span>
+                        </div>
+                        <span class="category">P</span>
+                    </div>
+                </div>
+                <div class="span4">
+                    <div class="box">
+                        <div class="box-wrapper">
+                            <img src="bcV5ix3kQ7s.jpg" />
+                        </div>
+                        <div class="text-layer">
+                            <span class="time">04:58</span>
+                            <span class="v-title">Prank vs Prank</span>
+                        </div>
+                        <span class="category">P</span>
+                    </div>
+                </div>
+                <div class="span4">
+                    <div class="box">
+                        <div class="box-wrapper">
+                            <img src="bcV5ix3kQ7s.jpg" />
+                        </div>
+                        <div class="text-layer">
+                            <span class="time">04:58</span>
+                            <span class="v-title">Prank vs Prank</span>
+                        </div>
+                        <span class="category">P</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

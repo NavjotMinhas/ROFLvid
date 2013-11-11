@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <style>
+            .smallbox{
+                background-color: #000;
+                border:thin solid #7a7a7a;
+                cursor: pointer;
+                font-family: Segoe UI;
+                height:190px;
+                margin-left: 100px;
+                margin-top: 100px;
+                overflow: hidden;
+                position: relative;
+                width:260px;
+            }
+            .smallbox:hover{
+                -webkit-transform: scale(1.15,1.15);
+            }
+            .thumbnail{
+                display: block;
+                height:120%;
+                left:0;
+                margin: -20px;
+                position:absolute;
+                top:0;
+                width:120%;
+            }
+            .textLayer{
+                -moz-box-sizing: border-box;
+                -webkit-transition: 1.5s;
+                background-color: rgba(29,29,29,0.9);
+                background-origin: border-box;
+                bottom:0;
+                box-sizing: border-box;
+                color:#fff;
+                height:0%;
+                min-height: 60px;
+                padding: 5px;
+                position: absolute;
+                width: 100%;
+            }
+            .smallbox:hover .textLayer{
+                height:100%;
+            }
+            .overlay{
+                border-color: rgba(255,255,255,0.0);
+                border-style: solid;
+                border-width: 3px;
+                bottom:0;
+                left: 0;
+                position: absolute;
+                right:0;
+                top:0;
+                transition: 1.4s;
+            }
+            .smallbox:hover .overlay{
+                border-color: rgba(255,255,255,0.4);
+            }
+            .play-btn{
+                background-image: url('play_btn.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                bottom:0;
+                left: 0;
+                position: absolute;
+                right:0;
+                opacity: 0.0;
+                top:0;
+            }
+            .smallbox:hover .play-btn{
+                opacity: 1.0;
+            }
+            .score{
+                -moz-box-sizing: border-box;
+                background-color: rgba(51,51,51,0.9);
+                border-top-right-radius: 2px;
+                bottom:60px;
+                box-sizing: border-box;
+                color:#fff;
+                font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+                font-weight: bold;
+                font-size: 11px;
+                height:21px;
+                left:0;
+                line-height: 19px;
+                position: absolute;
+                width:50%;
+            }
+            .smallbox:hover .score{
+                background-color: rgba(51,51,51,0);
+                bottom: 10px;
+                left:75%;
+                width:25%;
+            }
+            .score-img{
+                background-color: rgba(51,51,51,0.9);
+                background-image:url('roflbutton3.png');
+                float:left;
+                height:21px;
+                margin-right: 7px;
+                width:21px;
+            }
+            .smallbox:hover .score-img{
+                background-color: rgba(51,51,51,0);
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="smallbox">
+                <img class="thumbnail" src="02J6fTko7aE.jpg" />
+                <div class="play-btn"></div>
+                <div class="textLayer">
+                    Bacon Beer Can Chicken - Epic Meal Time
+                </div>
+                <div class="score">
+                    <div class="score-img"></div>
+                    1232
+                </div>
+                <div class="overlay"></div>
+            </div>    
+        </div>
+    </body>
+</html>

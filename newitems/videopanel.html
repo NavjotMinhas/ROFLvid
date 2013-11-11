@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <style>
+            .video{
+                -moz-transition-duration: 1.4s, 0.25s;
+                -moz-transition-property:background-color, -moz-transform;
+                -moz-transition-timing-function: ease, ease-in-out;
+
+                -o-transition-duration: 1.4s, 0.25s;
+                -o-transition-property:background-color, -o-transform;
+                -o-transition-timing-function: ease, ease-in-out;
+
+                -webkit-transition-duration: 1.4s, 0.25s;
+                -webkit-transition-property:background-color, -webkit-transform;
+                -webkit-transition-timing-function: ease, ease-in-out;
+
+                background-color: rgb(250,250,250);
+                box-shadow: rgba(0, 0, 0, 0.0666667) 0px 0px 0px 1px inset;
+                cursor: pointer;
+                font-family: Segoe UI;
+                height:250px;
+                margin-left:200px;
+                position: relative;
+                text-align: left;
+                transition-duration: 1.4s, 0.25s;
+                transition-property:background-color, transform;
+                transition-timing-function: ease, ease-in-out;
+                width:300px;
+            }
+            .video:active{
+                -moz-transform: scale(0.85,0.85);
+                -o-transform: scale(0.85,0.85);
+                -webkit-transform: scale(0.85,0.85);
+                transform: scale(0.85,0.85);
+            }
+            .video:hover{
+                background-color: #444;
+            }
+            .thumbnail{
+                height:180px;
+                overflow: hidden;
+                position: relative;
+            }
+            .text-wrapper{
+                -moz-transition: 0.5s;
+                -o-transition: 0.5s;
+                -webkit-transition: 0.5s;
+                box-sizing: border-box;
+                color:#0185c6;
+                display: block;
+                padding: 9px;
+                transition: 0.5s;
+            }
+            .video:hover .text-wrapper{
+                color:#fff; 
+            }
+            .play-btn{
+                background-image: url('play_btn.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                bottom:0;
+                left: 0;
+                position: absolute;
+                right:0;
+                top:0;
+            }
+            .score{
+                -moz-transition: 0.5s;
+                -o-transition: 0.5s;
+                -webkit-transition: 0.5s;
+                bottom:10px;
+                position: absolute;
+                right:10px;
+                transition: 0.5s;
+            }
+            .video:hover .score{
+                color:#fff; 
+            }
+            .video img{
+                -moz-transition: 1.4s;
+                -o-transition: 1.4s;
+                -webkit-transition: 1.4s;
+                height:180px;
+                transition: 1.4s;
+            }
+            .video:hover img{
+                -moz-transform: scale(1.2,1.2);
+                -o-transform: scale(1.2,1.2);
+                -webkit-transform: scale(1.2,1.2);
+                opacity: 0.1;
+                transform: scale(1.2,1.2);
+            }
+            .overlay{
+                -moz-transition: 1.4s;
+                -o-transition: 1.4s;
+                -webkit-transition: 1.4s;
+                border-color: rgba(255,255,255,0.0);
+                border-style: solid;
+                border-width: 5px;
+                bottom:0;
+                left: 0;
+                position: absolute;
+                right:0;
+                top:0;
+                transition: 1.4s;
+            }
+            .video:hover .overlay{
+                border-color: rgba(255,255,255,0.4);
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="02J6fTko7aE.jpg" />
+                    <div class="play-btn"></div>
+                </div>
+                <span class="text-wrapper">
+                    Bacon Beer Can Chicken - Epic Meal Time
+                </span>
+                <span class="score">
+                    10
+                </span>
+                <span class="overlay"></span>
+            </div>
+        </div>
+    </body>
+</html>

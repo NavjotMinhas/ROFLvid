@@ -1,0 +1,153 @@
+       
+body{
+    font-family:segoe ui;
+    font-size:90%;
+}
+h1, h2, h3 {
+    margin:.8em 0 .2em 0;
+    padding:0;
+}
+#mediaplayer_block{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    float:left;
+    height:91%;
+    margin-right:10px;
+    width:640px;
+}
+.fb_comments_frame_block{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    float:left;
+    height:100%;
+    overflow-y: scroll;
+    width:430px;
+}
+.upvote_btn{
+    background: -webkit-linear-gradient(top, #9DC262, #3F8C23);
+    background: -moz-linear-gradient(top, #9DC262, #3F8C23);
+    background: -ms-linear-gradient(top, #9DC262, #3F8C23);
+    background: -o-linear-gradient(top, #9DC262, #3F8C23);
+    background: -linear-gradient(top, #9DC262, #3F8C23);
+    border-radius: 2px;
+    border-color:#234F14;
+    border-style:solid;
+    border-width:1px;
+    box-shadow: rgba(255, 255, 255, 0.059) 0px 1px 0px 0px, rgba(255, 255, 255, 0.028) 1px 1px 0px 0px, rgba(0, 0, 0, 0.02) -1px -1px 0px 0px, rgba(255, 255, 255, 0.048) 1px 1px 0px 0px inset;
+    color:#fff;
+    cursor: pointer;
+    font-weight: bold;
+    height:28px;
+    margin-left:2px;
+    margin-right:2px;
+    text-align: center;
+    text-decoration: none; 
+    text-shadow: rgba(0,0,0,0.2) 0px 1px 0px;
+    vertical-align: middle;
+}
+.upvote_btn:hover{
+    background: -webkit-linear-gradient(top, #8DB86D, #34741D);
+    background: -moz-linear-gradient(top, #8DB86D, #34741D);
+    background: -ms-linear-gradient(top, #8DB86D, #34741D);
+    background: -o-linear-gradient(top, #8DB86D, #34741D);
+    background: -linear-gradient(top, #8DB86D, #34741D);
+}
+
+.upvote_btn img{
+    display: inline;
+    float:left;
+    height:25px;
+    width:25px;
+}
+.button-text{
+    display: block;
+    float:left;
+    margin-top: 5px;
+}
+.downvote_btn{
+    background: -webkit-linear-gradient(top, #CC0000, #990000);
+    background: -moz-linear-gradient(top, #CC0000, #990000);
+    background: -ms-linear-gradient(top, #CC0000, #990000);
+    background: -o-linear-gradient(top, #CC0000, #990000);
+    background: -linear-gradient(top, #CC0000, #990000);
+    border-radius: 2px;
+    border-color:#234F14;
+    border-style:solid;
+    border-width:1px;
+    box-shadow: rgba(255, 255, 255, 0.059) 0px 1px 0px 0px, rgba(255, 255, 255, 0.028) 1px 1px 0px 0px, rgba(0, 0, 0, 0.02) -1px -1px 0px 0px, rgba(255, 255, 255, 0.048) 1px 1px 0px 0px inset;
+    color:#fff;
+    cursor: pointer;
+    font-weight: bold;
+    height:28px;
+    margin-left:2px;
+    margin-right:2px;
+    text-align: center;
+    text-decoration: none; 
+    text-shadow: rgba(0,0,0,0.2) 0px 1px 0px;
+    vertical-align: middle;
+}
+.downvote_btn:hover{
+    background: -webkit-linear-gradient(top, #AA0000, #770000);
+    background: -moz-linear-gradient(top, #AA0000, #770000);
+    background: -ms-linear-gradient(top, #AA0000, #770000);
+    background: -o-linear-gradient(top, #AA0000, #770000);
+    background: -linear-gradient(top, #AA0000, #770000);
+}
+.downvote_btn img{
+    display: inline;
+    float:left;
+    height:25px;
+    width:25px;
+}
+.frame-title{
+    color:#0185c6;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+}
+#share-buttons{
+    margin: 10px 0;
+    position: relative;
+}
+div .twitter, .fb-like {
+    font-size: 1px;
+    display: inline-block;
+}
+div .fb_reset {
+    display: inline;
+}
+#vote_btn{
+    bottom: 0;
+    position: absolute; 
+}
+#vote_btn_wrapper{
+    height:65px;
+    float:left;
+    position:relative;
+    width: 160px;
+}
+#social_share_buttons{
+    bottom: 0;
+    position: absolute;
+}
+#social_share_buttons_wrapper{
+    float:left;
+    height:65px;
+    position:relative;
+    width:190px;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+.fb-like-btn, .tw-btn{
+    float:left;
+    margin-right:4px;
+}

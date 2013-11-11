@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" type="text/css" href="bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="bootstrap-responsive.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="bootstrap.js"></script>
+
+        <style>
+            #content{
+                display: block; 
+                margin-left: 3%;
+                margin-right: 3%;
+                width:94%;
+            }
+            .bluebox{
+                background-color: #0077b3;
+            }
+            .orangebox{
+                background-color: #fbb450;
+            }
+            .redbox{
+                background-color: #EE5757;
+            }
+            .greenbox{
+                background-color: #57a957;
+            }
+            .purplebox{
+                background-color: #f8b9b7;
+            }
+            .greybox{
+                background-color: #ccc;
+            }
+            .yellowbox{
+                background-color: #faf2cc;
+            }
+            .col{
+                height:520px;
+            }
+            .col2{
+                height:49%;
+            }
+            .col3{
+                height:38.4%;
+            }
+            .col4{
+                height:28.8%;
+            }
+            .col5{
+                height:100%;
+            }
+            .col6{
+                height:60%;
+                overflow: hidden;
+            }
+            .boxmargin{
+                margin-bottom: 10px;
+            }
+
+            .smallbox{
+                -moz-transition-delay: 0.25s;
+                -moz-transition-duration: 0.25s;
+                -moz-transition-property: -moz-transform;
+                -moz-transition-timing-function: ease-in-out;
+
+                -o-transition-delay: 0.25s;
+                -o-transition-duration: 0.25s;
+                -o-transition-property: -o-transform;
+                -o-transition-timing-function: ease-in-out;
+
+                -webkit-transition-delay: 0.25s;
+                -webkit-transition-duration: 0.25s;
+                -webkit-transition-property: -webkit-transform;
+                -webkit-transition-timing-function: ease-in-out;
+                background-color: #000;
+                border:thin solid #7a7a7a;
+                cursor: pointer;
+                font-family: Segoe UI;
+                height:100%;
+                overflow: hidden;
+                position: relative;
+                transition-delay: 0.25s;
+                transition-duration: 0.25s;
+                transition-timing-function: ease-in-out;
+            }
+            .smallbox:hover{
+                -moz-transform: scale(1.05,1.05);
+                -ms-transform: scale(1.05,1.05);
+                -o-transform: scale(1.05,1.05); 
+                -webkit-transform: scale(1.05,1.05); 
+                transform: scale(1.05,1.05); 
+                z-index: 2;
+            }
+            .video-thumbnail{
+                display: block;
+                height:120%;
+                left:0;
+                position:absolute;
+                top:0;
+                width:120%;
+            }
+            .textLayer{
+                -moz-box-sizing: border-box;
+                -moz-transition-delay: 0.25s;
+                -moz-transition-duration: 0.7s;
+                -moz-transition-property: height;
+                -moz-transition-timing-function: ease;
+
+                -o-transition-delay: 0.25s;
+                -o-transition-duration: 0.7s;
+                -o-transition-property: height;
+                -o-transition-timing-function: ease;
+
+                -webkit-transition-delay: 0.25s;
+                -webkit-transition-duration: 0.7s;
+                -webkit-transition-property: height;
+                -webkit-transition-timing-function: ease;
+
+                background-color: rgba(29,29,29,0.9);
+                background-origin: border-box;
+                bottom:0;
+                box-sizing: border-box;
+                color:#fff;
+                height: 0%;
+                min-height:60px;
+                padding: 5px;
+                position: absolute;
+                transition-delay: 0.25s;
+                transition-duration: 0.7s;
+                transition-property: height;
+                transition-timing-function: ease;
+                width: 100%;
+            }
+            .smallbox:hover .textLayer{
+                height:100%;
+            }
+            .overlay{
+                -moz-transition-delay: 0.25s;
+                -moz-transition-duration: 1.4s;
+
+                -o-transition-delay: 0.25s;
+                -o-transition-duration: 1.4s;
+
+                -webkit-transition-delay: 0.25s;
+                -webkit-transition-duration: 1.4s;
+
+                border-color: rgba(255,255,255,0.0);
+                border-style: solid;
+                border-width: 3px;
+                bottom:0;
+                left: 0;
+                position: absolute;
+                right:0;
+                top:0;
+                transition-delay: 0.25s;
+                transition-duration: 1.4s;
+            }
+            .smallbox:hover .overlay{
+                border-color: rgba(255,255,255,0.4);
+            }
+            .play-btn{
+                -moz-transition-delay: 0.25s;
+                -moz-transition-duration: 0.5s;
+                -moz-transition-property: opacity;
+                -moz-transition-timing-function: ease-in-out;
+
+                -o-transition-delay: 0.25s;
+                -o-transition-duration: 0.5s;
+                -o-transition-property: opacity;
+                -o-transition-timing-function: ease-in-out;
+
+                -webkit-transition-delay: 0.25s;
+                -webkit-transition-duration: 0.5s;
+                -webkit-transition-property: opacity;
+                -webkit-transition-timing-function: ease-in-out;
+
+                background-image: url('play_btn.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                bottom:0;
+                left: 0;
+                position: absolute;
+                right:0;
+                opacity: 0.0;
+                top:0;
+                transition-delay: 0.25s;
+                transition-duration: 0.5s;
+                transition-property: opacity;
+                transition-timing-function: ease-in-out;
+            }
+            .smallbox:hover .play-btn{
+                opacity: 0.3;
+            }
+            .score{
+                -moz-box-sizing: border-box;
+                -moz-transition-delay: 0.25s;
+                -moz-transition-duration: 0.7s;
+
+                -o-transition-delay: 0.25s;
+                -o-transition-duration: 0.7s;
+
+                -webkit-transition-delay: 0.25s;
+                -webkit-transition-duration: 0.7s;
+
+                background-color: rgba(51,51,51,0.9);
+                border-top-right-radius: 2px;
+                bottom:60px;
+                box-sizing: border-box;
+                color:#fff;
+                font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+                font-weight: bold;
+                font-size: 11px;
+                height:21px;
+                left:0;
+                line-height: 19px;
+                padding-left: 6px;
+                position: absolute;
+                transition-delay: 0.25s;
+                transition-duration: 0.7s;
+                width:50%;
+            }
+            .smallbox:hover .score{
+                background-color: rgba(51,51,51,0);
+                bottom: 10px;
+            }
+            .score-img{
+                background-color: rgba(51,51,51,0.9);
+                background-image:url('roflbutton3.png');
+                float:left;
+                height:21px;
+                margin-right: 7px;
+                width:21px;
+            }
+            .smallbox:hover .score-img{
+                background-color: rgba(51,51,51,0);
+            }
+            #main-carousel{
+                overflow: hidden;
+            }
+            #main-carousel img{
+                margin-top: -12.5%;
+                height: auto;
+                width:100%;
+            }
+            .img-wrapper{
+                height: 271px;
+                overflow: hidden;
+            }
+            .item{
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <div class="row-fluid">
+                <div class="span5 col">
+                    <div class="col6">
+                        <div id="main-carousel" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <a href="http://www.google.ca">
+                                        <div class="img-wrapper">
+                                            <img src="02J6fTko7aE_1.jpg" />
+                                        </div>
+                                        <div class="carousel-caption">
+                                            <h4>Text 1</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="http://www.google.ca">
+                                        <div class="img-wrapper">
+                                            <img src="1mRM1VwUiYA.jpg" />
+                                        </div>
+                                        <div class="carousel-caption">
+                                            <h4>Text 1</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="http://www.google.ca">
+                                        <div class="img-wrapper">
+                                            <img src="5ANy1UD8-x0.jpg" />
+                                        </div>
+                                        <div class="carousel-caption">
+                                            <h4>Text 1</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <a class="carousel-control left" href="#main-carousel" data-slide="prev">&lsaquo;</a>
+                            <a class="carousel-control right" href="#main-carousel" data-slide="next">&rsaquo;</a>
+                        </div>
+                    </div>
+                    <div class="col3 row-fluid">
+                        <div class="span6 col5 boxmargin">
+                            <div class="smallbox">
+                                <img class="video-thumbnail" src="02J6fTko7aE.jpg" />
+                                <div class="textLayer">
+                                    <h5>Bacon Beer Can Chicken - Epic Meal Time</h5>
+                                </div>
+                                <div class="play-btn"></div>
+                                <div class="score">
+                                    <div class="score-img"></div>
+                                    1232
+                                </div>
+                                <div class="overlay"></div>
+                            </div>  
+                        </div>
+                        <div class="span6 col5 boxmargin">
+                            <div class="smallbox">
+                                <img class="video-thumbnail" src="02J6fTko7aE.jpg" />
+                                <div class="textLayer">
+                                    <h5>Bacon Beer Can Chicken - Epic Meal Time</h5>
+                                </div>
+                                <div class="play-btn"></div>
+                                <div class="score">
+                                    <div class="score-img"></div>
+                                    1232
+                                </div>
+                                <div class="overlay"></div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="span4 col">
+                    <div class="col3 boxmargin">
+                        <div class="smallbox">
+                            <img class="video-thumbnail" src="02J6fTko7aE.jpg" />
+                            <div class="textLayer">
+                                <h5>Bacon Beer Can Chicken - Epic Meal Time</h5>
+                            </div>
+                            <div class="play-btn"></div>
+                            <div class="score">
+                                <div class="score-img"></div>
+                                1232
+                            </div>
+                            <div class="overlay"></div>
+                        </div>   
+                    </div>
+                    <div class="col4 row-fluid boxmargin">
+                        <div class="span6 col5">
+                            <div class="smallbox">
+                                <img class="video-thumbnail" src="02J6fTko7aE.jpg" />
+                                <div class="textLayer">
+                                    <h5>Bacon Beer Can Chicken - Epic Meal Time</h5>
+                                </div>
+                                <div class="play-btn"></div>
+                                <div class="score">
+                                    <div class="score-img"></div>
+                                    1232
+                                </div>
+                                <div class="overlay"></div>
+                            </div>   
+                        </div>
+                        <div class="span6 col5">
+                            <div class="smallbox">
+                                <img class="video-thumbnail" src="02J6fTko7aE.jpg" />
+                                <div class="textLayer">
+                                    <h5>Bacon Beer Can Chicken - Epic Meal Time</h5>
+                                </div>
+                                <div class="play-btn"></div>
+                                <div class="score">
+                                    <div class="score-img"></div>
+                                    1232
+                                </div>
+                                <div class="overlay"></div>
+                            </div>   
+                        </div>
+                    </div>
+                    <div class="col4 row-fluid">
+                        <div class="span6 col5">
+                            <div class="smallbox">
+                                <img class="video-thumbnail" src="02J6fTko7aE.jpg" />
+                                <div class="textLayer">
+                                    <h5>Bacon Beer Can Chicken - Epic Meal Time</h5>
+                                </div>
+                                <div class="play-btn"></div>
+                                <div class="score">
+                                    <div class="score-img"></div>
+                                    1232
+                                </div>
+                                <div class="overlay"></div>
+                            </div>   
+                        </div>
+                        <div class="span6 col5">
+                            <div class="smallbox">
+                                <img class="video-thumbnail" src="02J6fTko7aE.jpg" />
+                                <div class="textLayer">
+                                    <h5>Bacon Beer Can Chicken - Epic Meal Time</h5>
+                                </div>
+                                <div class="play-btn"></div>
+                                <div class="score">
+                                    <div class="score-img"></div>
+                                    1232
+                                </div>
+                                <div class="overlay"></div>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+                <div class="span3 col">
+                    <div class="col2 boxmargin">
+                        <div class="smallbox">
+                            <img class="video-thumbnail" src="02J6fTko7aE.jpg" />
+                            <div class="textLayer">
+                                <h5>Bacon Beer Can Chicken - Epic Meal Time</h5>
+                            </div>
+                            <div class="play-btn"></div>
+                            <div class="score">
+                                <div class="score-img"></div>
+                                1232
+                            </div>
+                            <div class="overlay"></div>
+                        </div>   
+                    </div>
+                    <div class="col2">
+                        <div class="smallbox">
+                            <img class="video-thumbnail" src="02J6fTko7aE.jpg" />
+                            <div class="textLayer">
+                                <h5>Bacon Beer Can Chicken - Epic Meal Time</h5>
+                            </div>
+                            <div class="play-btn"></div>
+                            <div class="score">
+                                <div class="score-img"></div>
+                                1232
+                            </div>
+                            <div class="overlay"></div>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

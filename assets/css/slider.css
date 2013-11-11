@@ -1,0 +1,101 @@
+#slider-container{
+    background-color: #fff;
+    border-color:#cccccc;
+    border-width:2px;
+    border-style:solid;
+    border-radius:8px;
+    color:#333333;
+    height:265px;
+    overflow:hidden;
+    width:75%;
+}
+.slider-pic{
+    background-color: #000;
+    border-color: #cccccc;
+    border-style: solid;
+    border-width: 1px;
+    float:left;
+    height:90%;
+    position:relative;
+    margin-left: 2%;
+    margin-right:1%;
+    top:5%;
+    width:46%;
+    display:none;
+}
+.slider-pic img{
+    height:100%;
+    width:100%;
+}
+.slider-info{
+    float:right;
+    height:90%;
+    position:relative;
+    margin-left: 1%;
+    margin-right:2%;
+    top:5%;
+    width:47%;
+}
+.slider-info .description{
+    border-bottom-color: #cccccc;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    height:83%;
+    position:relative;
+    width:100%;
+    display:none;
+}
+.slider-info .description h1{
+    margin: 0;
+}
+.slider-info #selector{
+    color:#fff;
+    height:15%;
+    padding-left:1.6%;
+    margin-top:2%; 
+    position:relative;
+    width:98.4%;
+}
+.orange-button{
+    background-image: url('../images/texture/login-button-texture.png');
+    background-repeat: repeat-x;
+    border-radius: 5px;
+    border-color:#ffaa22;
+    border-style:solid;
+    border-width:1px;
+    color:#333355;
+    font-weight: bold;
+    height:28px;
+    text-shadow: -1px 1px #fed87b;
+    width:105px;
+}
+.orange-button:hover{
+    background-image: url('../images/texture/login-button-texture-rollover.png');
+    border-color:#ed8c12;
+    color:#343455;
+    text-shadow: -1px 1px #ffd592;
+}
+#selector button{
+    height:100%;
+    margin-right: 1.6%;
+    width:23%;
+}
+.slider-icon{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border:0;
+    border-radius:5px;
+}
+.slider-icon:active{
+    width:21%;
+    border: 2px solid #fff;
+}
+.slider{
+    height:100%;
+    width:100%;
+}
+@media screen and (max-width:800px){
+    #slider-container{
+        display:none;
+    }
+}
